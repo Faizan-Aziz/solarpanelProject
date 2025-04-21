@@ -1,21 +1,21 @@
 import React from 'react';
-import About from './pages/about';
-import Contact from './pages/Contact';
-import Project from './pages/Packages';
-import Service from './pages/service'; 
-import Featurespage from './pages/Features';
-import Freequote from './pages/Freequote';
-import Customerreviews from './pages/Customerreviews';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
+import Project from './pages/Packages.jsx';
+import Service from './pages/Service.jsx'; 
+import Featurespage from './pages/Features.jsx';
+import Freequote from './pages/Freequote.jsx';
+import Customerreviews from './pages/Customerreviews.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Home from './pages/home';
-import TermsConditions from './pages/Term&Condition';
-import CEOPanel from './components/AboutComponent/SolarMissionCEO';
-import OurSolutions from './components/AboutComponent/OurSolutions';
+import Home from './pages/Home.jsx';
+import TermsConditions from './pages/Term&Condition.jsx';
+import CEOPanel from './components/AboutComponent/SolarMissionCEO.jsx';
+import OurSolutions from './components/AboutComponent/OurSolutions.jsx';
 import './assets/css/bootstrap.min.css';
 import './assets/css/style.css';
-import ScrollToTop from './components/ScrolltotopComponent/ScrollToTop'
-import WhatsAppStickyButton from "./components/WhatsAppStickyButton"
+import ScrollToTop from './components/ScrolltotopComponent/ScrollToTop.jsx'
+import WhatsAppStickyButton from "./components/WhatsAppStickyButton.jsx"
 
 
 
