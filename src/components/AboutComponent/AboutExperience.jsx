@@ -49,12 +49,12 @@ const AboutExperience = () => {
             <Fade direction="up" triggerOnce>
               <div className="p-lg-5 pe-lg-0">
                 <h6 className="text-primary">About Us</h6>
-                <h1 className="mb-4">15+ Years of Trusted Solar Energy Solutions</h1>
+                <h1 className="mb-4">2+ Years of Trusted Solar Energy Solutions</h1>
                 <p>
-                  At <b className='text-primary'>Hafeez Solar Panel</b>, we have been providing reliable and affordable solar power systems across Pakistan for over 15 years. Our experience helps us deliver the best solar solutions for homes, businesses, and industries.
+                  At <b className='text-primary'>Hafeez Solar Energy</b>, we have been providing reliable and affordable solar power systems across Pakistan for over 2 years plus. Our experience helps us deliver the best solar solutions for homes, businesses, and industries.
                 </p>
                 <p>
-                  <i className="fa fa-check-circle text-primary me-3"></i><b>High-Quality Products – </b> We use top-grade solar panels and equipment.
+                  <i className="fa fa-check-circle text-primary me-3"></i><b>High-Quality Products – </b>We use top-grade solar panels and equipment.
                 </p>
                 <p>
                   <i className="fa fa-check-circle text-primary me-3"></i><b>Expert Installations – </b>Our skilled team ensures long-lasting performance.

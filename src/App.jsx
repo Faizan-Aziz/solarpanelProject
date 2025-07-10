@@ -16,6 +16,8 @@ import './assets/css/bootstrap.min.css';
 import './assets/css/style.css';
 import ScrollToTop from './components/ScrolltotopComponent/ScrollToTop.jsx'
 import WhatsAppStickyButton from "./components/WhatsAppStickyButton.jsx"
+// import OurMajorProjects from './components/Majorproject/OurMajorProjects.jsx';
+
 
 
 
@@ -39,6 +41,7 @@ const App = () => {
           <Route path="/moreabout" element={<OurSolutions />} />
           <Route path="/mission" element={<CEOPanel/>} />
           <Route path="/WhatsApp" element={<WhatsAppStickyButton/>} />
+          {/* <Route path="/majorProjects" element={<OurMajorProjects/>} /> */}
          
         </Routes>
       </BrowserRouter>

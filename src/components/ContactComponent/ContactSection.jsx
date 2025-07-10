@@ -80,7 +80,7 @@ const ContactSection = () => {
                 <b>Have any questions?</b> Fill out the form below and our experts will contact you within 24 hours Or you can also directly contact us by
               </p>
               <div className="mb-4">
-                <p className="mb-2">📞 <b>0345 5430275</b></p>
+                <p className="mb-2">📞 <b>051-5764877</b></p>
                 <p className="mb-2">📧 <b>hafeezsolarenergy@gmail.com</b></p>
                 <p className="mb-0">📍 <b>Office #G-252/A,China Market,College Road, RWP,</b></p>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Hafeez Solar Energy</b>

@@ -43,7 +43,8 @@ const SolarMissionImage = () => {
         width: '100%',
         display: 'flex',
         justifyContent: 'center',
-        padding: '20px 0'
+        padding: '20px 0',
+        
       }}>
         <Fade direction="up" triggerOnce style={{
           width: '85%',
@@ -60,8 +61,8 @@ const SolarMissionImage = () => {
             </h2>
             
             <div style={{
-              lineHeight: '1.6',
-              color: '#555',
+              lineHeight: '1.8',
+              color: ' #9B9B9B',
               textAlign: 'justify',
               fontSize: 'clamp(1rem, 1.2vw, 1.1rem)' // Responsive text
             }}>

@@ -3,24 +3,41 @@ import { FaWhatsapp } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const WhatsAppStickyButton = () => {
-  // WhatsApp number (without '+' or leading '0')
-  const whatsappNumber = '923455430275'; // Example: Pakistan number
+  const whatsappNumber = '923455430275'; // Without '+' or '0'
   
-  // Default message (keep it simple for testing)
+  // Improved message with proper encoding
   const message = 'Hello! I have a question about your solar products.';
 
-  // Handle click for desktop and mobile
+  // Universal WhatsApp handler
   const handleWhatsAppClick = () => {
-    // Use 'api.whatsapp.com' (most reliable across platforms)
-    const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+    // Create both URL formats
+    const webUrl = `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+    const apiUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
     
-    // Try to open in a new tab (fallback to same tab if blocked)
-    window.open(url, '_blank') || window.location.assign(url);
+    // Detect platform
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isWhatsAppWeb = window.location.hostname.includes('web.whatsapp.com');
+
+    if (isMobile) {
+      // For mobile devices, use api.whatsapp.com
+      window.location.href = apiUrl;
+    } else if (isWhatsAppWeb) {
+      // If already in WhatsApp Web
+      window.location.href = webUrl;
+    } else {
+      // For desktop - try to open WhatsApp Desktop via custom protocol
+      window.open(`whatsapp://send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`, '_blank');
+      
+      // Fallback to web if desktop app not installed
+      setTimeout(() => {
+        window.open(webUrl, '_blank');
+      }, 500);
+    }
   };
 
   return (
     <>
-      {/* Desktop Floating Button (Bottom Right) */}
+      {/* Desktop Floating Button */}
       <div 
         className="position-fixed d-none d-md-block" 
         style={{
@@ -48,7 +65,7 @@ const WhatsAppStickyButton = () => {
         </div>
       </div>
 
-      {/* Mobile Sticky Bar (Bottom Center) */}
+      {/* Mobile Sticky Bar */}
       <div 
         className="position-fixed d-md-none w-100 text-center" 
         style={{
@@ -60,16 +77,14 @@ const WhatsAppStickyButton = () => {
           boxShadow: '0 -2px 10px rgba(0,0,0,0.1)'
         }}
       >
-        <a 
-          href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`}
-          className="text-white d-flex align-items-center justify-content-center"
-          style={{ textDecoration: 'none' }}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button 
+          onClick={handleWhatsAppClick}
+          className="border-0 bg-transparent text-white d-flex align-items-center justify-content-center w-100"
+          style={{ outline: 'none' }}
         >
           <FaWhatsapp size={24} className="me-2" />
           <span style={{ fontWeight: '500' }}>Chat on WhatsApp</span>
-        </a>
+        </button>
       </div>
     </>
   );

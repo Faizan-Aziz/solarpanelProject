@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-lg-5 col-md-6">
             <h5 className="text-white mb-4">Join The Future With Us</h5>
             <div className="mb-4">
-              <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i> Office # G-252/A, China Market, College Rd, Rawalpindi</p>
+              <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i> Office # G-252/A, China Market, College Road Rawalpindi</p>
               <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>0345 5430275</p>
               <p className="mb-2"><i className="fa fa-envelope me-3"></i>hafeezsolarenergy@gmail.com</p>
             </div>
@@ -20,7 +20,7 @@ const Footer = () => {
               </a>
               <a
                 className="btn btn-square btn-outline-light btn-social"
-                href="https://wa.me/923455430275?text=Hey%2C%20Hafeez%20Solar%20Energy%20Here.%20What%20is%20your%20question%3F%20Feel%20free%20to%20ask."
+                href="https://wa.me/923455430275?text=Hello%20Hafeez%20Solar%20Team%2C%20I%20have%20a%20question%20about%3A%0A%0A-%20Solar%20installations%0A-%20Product%20pricing%0A-%20Technical%20support%0A%0ALooking%20forward%20to%20your%20response."
                 target="_blank"
                 rel="noopener noreferrer"
               >

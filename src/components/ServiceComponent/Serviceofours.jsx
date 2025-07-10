@@ -8,11 +8,11 @@ const Serviceofours = () => {
         {/* Title Section with Animation */}
         <Fade direction="down" triggerOnce>
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <h6 className="text-primary"  style={{ fontSize: '1.5rem'}}>Our Services</h6>
-            <h1 className="mb-4" style={{ fontSize: '1.5rem', fontWeight: 'normal' }}>
+            <h2 className="text-primary" >Our Services</h2>
+            <h3 className="mb-4">
               Whatever your unique solar energy needs,{' '}
               <span className="text-primary">Hafeez Solar Energy</span> has a solution
-            </h1>
+            </h3>
           </div>
         </Fade>
 
@@ -21,9 +21,9 @@ const Serviceofours = () => {
           {/* Card 1 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" triggerOnce>
-              <div className="service-item rounded overflow-hidden">
+              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
                 <img className="img-fluid" src="img/img-600x400-1.jpg" alt="" />
-                <div className="position-relative p-4 pt-0">
+                <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-solar-panel fa-3x"></i>
                   </div>
@@ -37,16 +37,14 @@ const Serviceofours = () => {
           {/* Card 2 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={100} triggerOnce>
-              <div className="service-item rounded overflow-hidden">
+              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
                 <img className="img-fluid" src="img/img-600x400-2.jpg" alt="" />
-                <div className="position-relative p-4 pt-0">
+                <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-wind fa-3x"></i>
                   </div>
                   <h4 className="mb-3">Power Purchase Agreement (PPA)</h4>
-                  <p>Maximize ROI with our O&M services: panel cleaning, performance monitoring, and preventative maintenance. Properly maintained systems last 25+ years. We also provide asset management and real-time monitoring solutions.
-                  </p>
-                 
+                  <p>Maximize ROI with our O&M services: panel cleaning, performance monitoring, and preventative maintenance. Properly maintained systems last 25+ years. We also provide asset management and real-time monitoring solutions.</p>
                 </div>
               </div>
             </Fade>
@@ -55,15 +53,14 @@ const Serviceofours = () => {
           {/* Card 3 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={200} triggerOnce>
-              <div className="service-item rounded overflow-hidden">
+              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
                 <img className="img-fluid" src="img/img-600x400-3.jpg" alt="" />
-                <div className="position-relative p-4 pt-0">
+                <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-lightbulb fa-3x"></i>
                   </div>
                   <h4 className="mb-3">Operations And Maintenance (O&M)</h4>
                   <p>Keeping your Solar Panels at peak efficiency ensures maximum return on investment. Solar Panels that are properly maintained can last for many years. HAFEEZ SOLAR provides operations and maintenance and Solar asset management and monitoring services.</p>
-             
                 </div>
               </div>
             </Fade>
@@ -72,9 +69,9 @@ const Serviceofours = () => {
           {/* Card 4 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={300} triggerOnce>
-              <div className="service-item rounded overflow-hidden">
+              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
                 <img className="img-fluid" src="img/img-600x400-4.jpg" alt="" />
-                <div className="position-relative p-4 pt-0">
+                <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-solar-panel fa-3x"></i>
                   </div>
@@ -88,9 +85,9 @@ const Serviceofours = () => {
           {/* Card 5 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={400} triggerOnce>
-              <div className="service-item rounded overflow-hidden">
+              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
                 <img className="img-fluid" src="img/img-600x400-5.jpg" alt="" />
-                <div className="position-relative p-4 pt-0">
+                <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-wind fa-3x"></i>
                   </div>
@@ -104,9 +101,9 @@ const Serviceofours = () => {
           {/* Card 6 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={500} triggerOnce>
-              <div className="service-item rounded overflow-hidden">
+              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
                 <img className="img-fluid" src="img/img-600x400-6.jpg" alt="" />
-                <div className="position-relative p-4 pt-0">
+                <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-lightbulb fa-3x"></i>
                   </div>

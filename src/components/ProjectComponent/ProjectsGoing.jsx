@@ -15,13 +15,13 @@ const ProjectsGoing = () => {
       id: 1,
       category: 'first',
       image: '/img/img-600x400-6.jpg',
-      title:   <strong >4K Watt 24 VOLT</strong>,
+      title: <strong>4K Watt 24 VOLT</strong>,
       description: (
-        <>
+        <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B' , lineHeight: 1.6}}>
           4K Watt Inverter Knox/Fox, 6 Solar Panel (580-590) Watt Astronergy/Longi, L2/L3 Stand, DC Wire, AC & DC Breaker, Installation with all Accessories.
           <br />
           <strong className="text-primary">Supports:</strong>
-          <ul style={{ marginLeft: '20px', paddingLeft: '0' , marginBottom: '0', }}>
+          <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0' }}>
             <li>Fan (10)</li>
             <li>Energy Saver (20)</li>
             <li>Dc Inverter Ac 1.5 Ton (1)</li>
@@ -30,19 +30,19 @@ const ProjectsGoing = () => {
             <li>Iron/Motor</li>
           </ul>
           <strong className="text-primary">Packages:</strong>
-          <ul style={{ marginLeft: '20px', paddingLeft: '0' , marginBottom: '0'}}>
-            <li>Rs 325,000</li>
+          <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0'}}>
+            <li><strong>STANDARD PACKAGE :</strong> Rs 325,000</li>
           </ul>
-        </>
+        </div>
       ),
     },
     {
       id: 2,
       category: 'second',
       image: '/img/img-600x400-5.jpg',
-      title: <strong>6K WATT 48 VOLT</strong> ,
+      title: <strong>6K WATT 48 VOLT</strong>,
       description: (
-        <>
+        <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B', lineHeight: 1.6 }}>
           6K Watt Inverter Knox/Fox, 11 Solar Panel (580-590) Watt Astronergy/Longi, L2/L3 Stand, DC Wire, AC & DC Breaker, Installation with all Accessories.
           <br />
           <strong className="text-primary">Supports:</strong>
@@ -56,10 +56,10 @@ const ProjectsGoing = () => {
           </ul>
           <strong className="text-primary">Packages:</strong>
           <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0' }}>
-            <li><strong>STANDARD:</strong> Rs 500,000</li>
-            <li><strong>PREMIUM:</strong> Rs 550,000</li>
+            <li><strong>STANDARD :</strong> Rs 500,000</li>
+            <li><strong>PREMIUM :</strong> Rs 550,000</li>
           </ul>
-        </>
+        </div>
       ),
     },
     {
@@ -68,8 +68,8 @@ const ProjectsGoing = () => {
       image: '/img/img-600x400-4.jpg',
       title: <strong>6K WATT</strong>,
       description: (
-        <>
-          <>ON GRID SOLAR (600-700 UNIT) Monthly</>
+        <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B' , lineHeight: 1.6}}>
+          ON GRID SOLAR (600-700 UNIT) Monthly
           <br />
           <strong className="text-primary">Supports:</strong>
           <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0' }}>
@@ -84,9 +84,9 @@ const ProjectsGoing = () => {
           </ul>
           <strong className="text-primary">Price:</strong>
           <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0' }}>
-            <li>Rs 675,000</li>
+            <li><strong>STANDARD PACKAGE :</strong> Rs 675,000</li>
           </ul>
-        </>
+        </div>
       ),
     },
     {
@@ -95,8 +95,8 @@ const ProjectsGoing = () => {
       image: '/img/img-600x400-3.jpg',
       title: <strong>10K _ WATT</strong>,
       description: (
-        <>
-          <>ON GRID SOLAR (1100-1300 UNIT) Monthly</>
+        <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B', lineHeight: 1.6 }}>
+          ON GRID SOLAR (1100-1300 UNIT) Monthly
           <br />
           <strong className="text-primary">Supports:</strong>
           <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0' }}>
@@ -110,13 +110,12 @@ const ProjectsGoing = () => {
             <li>Installation with all Accessories</li>
           </ul>
           <strong className="text-primary">Packages:</strong>
-          <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0' }}>
-            <li><strong>STANDARD PACKAGE:</strong> Rs 890,000</li>
-            <li><strong>PREMIUM PACKAGE:</strong> Rs 940,000</li>
+          <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0', lineHeight: 1.6 }}>
+            <li><strong>STANDARD PACKAGE : </strong> Rs 890,000</li>
+            <li><strong>PREMIUM PACKAGE : </strong> Rs 940,000</li>
           </ul>
-        </>
+        </div>
       ),
-      
     },
     {
       id: 5,
@@ -124,8 +123,8 @@ const ProjectsGoing = () => {
       image: '/img/img-600x400-2.jpg',
       title: <strong>15K _ WATT</strong>,
       description: (
-        <>
-          <>ON GRID SOLAR (1600-1800 UNIT) Monthly</>
+        <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B', lineHeight: 1.6 }}>
+          ON GRID SOLAR (1600-1800 UNIT) Monthly
           <br />
           <strong className="text-primary">Supports:</strong>
           <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0' }}>
@@ -140,13 +139,12 @@ const ProjectsGoing = () => {
           </ul>
           <strong className="text-primary">Packages:</strong>
           <ul style={{ marginLeft: '20px', paddingLeft: '0', marginBottom: '0' }}>
-            <li><strong>STANDARD PACKAGE:</strong> Rs 1,250,000</li>
-            <li><strong>PREMIUM PACKAGE:</strong> Rs 1,300,000</li>
+            <li><strong>STANDARD PACKAGE : </strong> Rs 1,250,000</li>
+            <li><strong>PREMIUM PACKAGE : </strong> Rs 1,300,000</li>
           </ul>
-        </>
+        </div>
       ),
     },
-    
   ];
 
   // Function to handle filter change
@@ -177,8 +175,8 @@ const ProjectsGoing = () => {
         {/* Section Heading */}
         <Fade direction="up" delay={100} triggerOnce>
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '600px' }}>
-            <h6 className="text-primary">Our Packages</h6>
-            <h1 className="mb-4">Our Latest Solar And Renewable Energy Packages</h1>
+            <h2 className="text-primary">Our Packages</h2>
+            <h3 className="mb-4">Our Latest Solar And Renewable Energy Packages</h3>
           </div>
         </Fade>
 
@@ -232,7 +230,7 @@ const ProjectsGoing = () => {
                     className="img-fluid" 
                     src={project.image} 
                     alt={project.title} 
-                    onClick={() => openLightbox(project.image)} // Open lightbox on image click
+                    onClick={() => openLightbox(project.image)}
                   />
                   <div className="portfolio-btn">
                     <a 
@@ -262,50 +260,48 @@ const ProjectsGoing = () => {
       </div>
 
       {isLightboxOpen && (
-  <div 
-    style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      backgroundColor: 'rgba(0, 0, 0, 0.8)',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      zIndex: 1000,
-    }}
-    onClick={closeLightbox} // Close lightbox on click outside the image
-  >
-    {/* Close Button (X) with Larger Size */}
-    <button
-      style={{
-        position: 'absolute',
-        top: '20px',
-        right: '20px',
-        background: 'transparent',
-        border: 'none',
-        color: 'white',
-        fontSize: '36px', // Increased font size for a larger X
-        cursor: 'pointer',
-      }}
-      onClick={(e) => {
-        e.stopPropagation(); // Prevent closing the lightbox when clicking the button
-        closeLightbox();
-      }}
-    >
-      ×
-    </button>
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 1000,
+          }}
+          onClick={closeLightbox}
+        >
+          <button
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '20px',
+              background: 'transparent',
+              border: 'none',
+              color: 'white',
+              fontSize: '36px',
+              cursor: 'pointer',
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+              closeLightbox();
+            }}
+          >
+            ×
+          </button>
 
-    {/* Lightbox Image */}
-    <img 
-      src={selectedImage} 
-      alt="Selected" 
-      style={{ maxWidth: '90%', maxHeight: '90%' }} 
-      onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
-    />
-  </div>
-)}
+          <img 
+            src={selectedImage} 
+            alt="Selected" 
+            style={{ maxWidth: '90%', maxHeight: '90%' }} 
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };

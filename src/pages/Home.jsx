@@ -12,6 +12,10 @@ import QuoteSection from '../components/ProjectComponent/QuoteComponent'
 import Team from '../components/AboutComponent/Team'
 import Footer from '../components/Footer'
 import WhatsAppStickyButton from "../components/WhatsAppStickyButton"
+import OurMajorProjects from '../components/Majorproject/OurMajorProjects'
+import OurGallery from '../components/Gallery/Ourgallery'
+
+
 
 const Home = () => {
   return (
@@ -23,9 +27,11 @@ const Home = () => {
    <SolarMissionImage/>
    <AboutExperience/>
    <Serviceofours/>
+   <OurMajorProjects/>
    <ChooseUs/>
    <ProjectsGoing/>
    <QuoteSection/>
+   <OurGallery/>
    <Team/>
    <Footer/>
    <WhatsAppStickyButton/>

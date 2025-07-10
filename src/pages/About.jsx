@@ -8,9 +8,8 @@ import AboutExperience from "../components/AboutComponent/AboutExperience"
 import Team from "../components/AboutComponent/Team"
 import CEOPanel from "../components/AboutComponent/SolarMissionCEO"
 import WhatsAppStickyButton from "../components/WhatsAppStickyButton"
-
-
-
+import OurGallery from '../components/Gallery/Ourgallery'
+import OurMajorProjects from '../components/Majorproject/OurMajorProjects'
 
 
 const About = () => {
@@ -22,6 +21,8 @@ const About = () => {
     <Feature/>
     <CEOPanel/>
     <AboutExperience/>
+    <OurMajorProjects/>
+    <OurGallery/>
     <Team/>
     <Footer/>
     <WhatsAppStickyButton />

@@ -7,28 +7,28 @@ const Feature = () => {
   const features = [
     {
       icon: 'fa-users',
-      count: 3453,
+      count: 15000,
       title: 'Happy Customers',
       description: 'Trusted by thousands of homes and businesses in Pakistan',
       delay: 100,
     },
     {
       icon: 'fa-check',
-      count: 4234,
+      count: 300,
       title: 'Solar Project Done',
       description: 'Providing reliable solar solutions all over Pakistan',
       delay: 300,
     },
     {
       icon: 'fa-award',
-      count: 3123,
-      title: 'Awards Won',
+      count: 10000,
+      title: 'Electronic Project',
       description: 'Recognized for quality and excellent service.',
       delay: 500,
     },
     {
       icon: 'fa-users-cog',
-      count: 500,
+      count: 20,
       title: 'Expert Team',
       description: 'Skilled workers ensuring the best solar installations.',
       delay: 700,
@@ -47,7 +47,7 @@ const Feature = () => {
                     <i className={`fa ${feature.icon} text-white`}></i>
                   </div>
                   <h1 className="mb-0">
-                    <CountUp end={feature.count} duration={5} />
+                    <CountUp end={feature.count} duration={5} suffix="+" />
                   </h1>
                 </div>
                 <h5 className="mb-3">{feature.title}</h5>
