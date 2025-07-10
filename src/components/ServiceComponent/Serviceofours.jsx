@@ -21,7 +21,7 @@ const Serviceofours = () => {
           {/* Card 1 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" triggerOnce>
-              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
+              <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
                 <img className="img-fluid" src="img/img-600x400-1.jpg" alt="" />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
@@ -37,7 +37,7 @@ const Serviceofours = () => {
           {/* Card 2 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={100} triggerOnce>
-              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
+              <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
                 <img className="img-fluid" src="img/img-600x400-2.jpg" alt="" />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
@@ -53,7 +53,7 @@ const Serviceofours = () => {
           {/* Card 3 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={200} triggerOnce>
-              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
+              <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
                 <img className="img-fluid" src="img/img-600x400-3.jpg" alt="" />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
@@ -69,7 +69,7 @@ const Serviceofours = () => {
           {/* Card 4 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={300} triggerOnce>
-              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
+              <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
                 <img className="img-fluid" src="img/img-600x400-4.jpg" alt="" />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
@@ -85,7 +85,7 @@ const Serviceofours = () => {
           {/* Card 5 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={400} triggerOnce>
-              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
+              <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
                 <img className="img-fluid" src="img/img-600x400-5.jpg" alt="" />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
@@ -101,7 +101,7 @@ const Serviceofours = () => {
           {/* Card 6 */}
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={500} triggerOnce>
-              <div className="service-item rounded overflow-hidden" style={{ height: '650px' }}>
+              <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
                 <img className="img-fluid" src="img/img-600x400-6.jpg" alt="" />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">

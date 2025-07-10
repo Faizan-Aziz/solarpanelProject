@@ -44,7 +44,7 @@ const MajorProjects = () => {
           {projects.map((project) => (
             <div key={project.id} className="col-md-6 col-lg-4">
               <Fade direction="up" delay={project.id * 100} triggerOnce>
-                <div className="service-item rounded overflow-hidden" style={{ height: '420px' }}>
+                <div className="service-item rounded overflow-hidden" style={{ height: '430px' }}>
                   {/* Image Section */}
                   <img 
                     className="img-fluid w-100 rounded-top" 
