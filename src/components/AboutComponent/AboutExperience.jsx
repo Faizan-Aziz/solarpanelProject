@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
 import { Fade } from 'react-awesome-reveal';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const AboutExperience = () => {
   return (
     <div className="container-fluid bg-light overflow-hidden my-5 px-lg-0">
       <div className="container about px-lg-0">
         <div className="row g-0 mx-lg-0">
-          {/* Image Section - Modified for mobile */}
+          {/* Image Section - Identical styling with lazy load */}
           <div className="col-lg-6 ps-lg-0" style={{ 
             minHeight: '400px',
-            // Mobile styles
             '@media (max-width: 768px)': {
               paddingLeft: '0 !important',
               paddingRight: '0 !important',
@@ -19,18 +20,18 @@ const AboutExperience = () => {
             }
           }}>
             <div className="position-relative h-100" style={{
-              // Mobile styles
               '@media (max-width: 768px)': {
                 position: 'static !important',
                 height: 'auto !important'
               }
             }}>
-              <img
+              <LazyLoadImage
                 className="position-absolute img-fluid w-100 h-100"
-                src="/img/about.jpg"
+                src="https://res.cloudinary.com/dovqlntrq/image/upload/about_fjpfwd"
+                alt="About Us"
+                effect="blur"
                 style={{ 
                   objectFit: 'cover',
-                  // Mobile styles
                   '@media (max-width: 768px)': {
                     width: '100% !important',
                     position: 'relative !important',
@@ -39,12 +40,18 @@ const AboutExperience = () => {
                     right: '0 !important'
                   }
                 }}
-                alt="About Us"
+                wrapperProps={{
+                  style: {
+                    display: 'block',
+                    height: '100%',
+                    width: '100%'
+                  }
+                }}
               />
             </div>
           </div>
 
-          {/* Content Section - Unchanged */}
+          {/* Content Section - COMPLETELY UNCHANGED */}
           <div className="col-lg-6 about-text py-3">
             <Fade direction="up" triggerOnce>
               <div className="p-lg-5 pe-lg-0">

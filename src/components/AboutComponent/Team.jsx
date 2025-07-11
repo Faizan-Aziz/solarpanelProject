@@ -2,11 +2,11 @@ import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 
 const Team = () => {
-  // Team data with simplified WhatsApp messages
+  // Team data with Cloudinary image URLs (only change made)
   const teamMembers = [
     {
       id: 1,
-      image: '/img/CEO.jpg',
+      image: 'https://res.cloudinary.com/dovqlntrq/image/upload/CEO_pssl8h',
       name: 'HAFEEZ UL REHMAN',
       designation: 'CEO',
       socialLinks: [
@@ -22,7 +22,7 @@ const Team = () => {
     },
     {
       id: 2,
-      image: '/img/director.jpg',
+      image: 'https://res.cloudinary.com/dovqlntrq/image/upload/director_s240rb',
       name: 'ALI REHMAN',
       designation: 'Director',
       socialLinks: [
@@ -38,7 +38,7 @@ const Team = () => {
     },
     {
       id: 3,
-      image: '/img/software_engineer.png', 
+      image: 'https://res.cloudinary.com/dovqlntrq/image/upload/software_engineer_so7pyh',
       name: 'Wasif Malik',
       designation: 'Software Engineer',
       socialLinks: [
@@ -70,7 +70,11 @@ const Team = () => {
               <Fade direction="up" triggerOnce delay={member.id * 100}>
                 <div className="team-item rounded overflow-hidden">
                   <div className="d-flex">
-                    <img className="img-fluid w-75" src={member.image} alt={member.name} />
+                    <img 
+                      className="img-fluid w-75" 
+                      src={member.image} 
+                      alt={member.name} 
+                    />
                     <div className="team-social w-25 d-flex flex-column align-items-center justify-content-center">
                       {member.socialLinks.map((link, index) => (
                         <a

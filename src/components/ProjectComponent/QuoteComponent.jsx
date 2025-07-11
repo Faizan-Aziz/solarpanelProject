@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const QuoteSection = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +30,6 @@ const QuoteSection = () => {
     setError('');
     setSuccess('');
 
-    // Updated Formspree endpoint
     const formspreeEndpoint = 'https://formspree.io/f/xgvalkzg';
 
     try {
@@ -41,7 +42,7 @@ const QuoteSection = () => {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          phone: formData.mobile, // Changed key to 'phone' for better semantics
+          phone: formData.mobile,
           service: formData.service,
           message: formData.message,
         }),
@@ -75,11 +76,13 @@ const QuoteSection = () => {
         <div className="row g-0 mx-lg-0">
           <div className="col-lg-6 ps-lg-0" style={{ minHeight: '400px' }}>
             <div className="position-relative h-100">
-              <img
+              <LazyLoadImage
                 className="position-absolute img-fluid w-100 h-100"
-                src="img/quote.jpg"
+                src="https://res.cloudinary.com/dovqlntrq/image/upload/quote_xsmfhz"
                 style={{ objectFit: 'cover' }}
                 alt="Solar Consultation"
+                effect="blur"
+                wrapperClassName="position-absolute w-100 h-100"
               />
             </div>
           </div>

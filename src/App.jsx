@@ -41,7 +41,7 @@ const App = () => {
           <Route path="/moreabout" element={<OurSolutions />} />
           <Route path="/mission" element={<CEOPanel/>} />
           <Route path="/WhatsApp" element={<WhatsAppStickyButton/>} />
-          {/* <Route path="/majorProjects" element={<OurMajorProjects/>} /> */}
+         
          
         </Routes>
       </BrowserRouter>

@@ -1,12 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Make sure to import Link
+import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Footer = () => {
+  // Gallery images with Cloudinary IDs
+  const galleryImages = [
+    'gallery-1_reqvw6',
+    'gallery-2_opralf',
+    'gallery-3_fp4qls',
+    'gallery-4_ej6q2q',
+    'gallery-5_nnysxp',
+    'gallery-6_gw0toc'
+  ];
+
   return (
     <div className="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
       <div className="container py-5">
         <div className="row g-5 justify-content-between">
-          {/* First Column - Contact Info (unchanged) */}
+          {/* First Column - Contact Info */}
           <div className="col-lg-5 col-md-6">
             <h5 className="text-white mb-4">Join The Future With Us</h5>
             <div className="mb-4">
@@ -29,8 +41,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Second Column - Quick Links (updated with Link components) */}
-          <div className="col-lg-4 col-md-6"> {/* Changed from col-lg-3 to col-lg-4 */}
+          {/* Second Column - Quick Links */}
+          <div className="col-lg-4 col-md-6">
             <h5 className="text-white mb-4">Quick Links</h5>
             <Link className="btn btn-link" to="/about">About Us</Link>
             <Link className="btn btn-link" to="/contact">Contact Us</Link>
@@ -39,16 +51,23 @@ const Footer = () => {
             <Link className="btn btn-link" to="/projects">Packages</Link>
           </div>
 
-          {/* Third Column - Project Gallery (unchanged) */}
+          {/* Third Column - Project Gallery with Lazy Loading */}
           <div className="col-lg-3 col-md-6">
             <h5 className="text-white mb-4">Project Gallery</h5>
             <div className="row g-2">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div className="col-4" key={item}>
-                  <img 
-                    className="img-fluid rounded" 
-                    src={`img/gallery-${item}.jpg`} 
-                    alt={`Project ${item}`} 
+              {galleryImages.map((imageId, index) => (
+                <div className="col-4" key={index}>
+                  <LazyLoadImage
+                    className="img-fluid rounded"
+                    src={`https://res.cloudinary.com/dovqlntrq/image/upload/${imageId}`}
+                    alt={`Project ${index + 1}`}
+                    effect="blur"
+                    width="100%"
+                    height="100%"
+                    style={{
+                      aspectRatio: '1/1',
+                      objectFit: 'cover'
+                    }}
                   />
                 </div>
               ))}
@@ -57,7 +76,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright Section (unchanged) */}
+      {/* Copyright Section */}
       <div className="container">
         <div className="copyright">
           <div className="row">
@@ -65,7 +84,7 @@ const Footer = () => {
               &copy; <Link to="/">Hafeez Solar</Link>, All Right Reserved.
             </div>
             <div className="col-md-6 text-center text-md-end pb-4">
-              Developed By: <a href="https://www.linkedin.com/in/muhammad-faizan-aziz-11a5b7231/">Faizan Aziz</a>
+              Developed By: <a href="https://www.linkedin.com/in/muhammad-faizan-aziz-11a5b7231/">Muhammad Faizan Aziz</a>
             </div>
           </div>
         </div>

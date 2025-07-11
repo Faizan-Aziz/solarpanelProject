@@ -11,7 +11,7 @@ const Topbar = () => {
           </div>
           <div className="h-100 d-inline-flex align-items-center">
             <small className="far fa-clock text-primary me-2"></small>
-            <small>Mon - Sat : 10.00 AM - 07.00 PM</small>
+            <small>Mon - Sat : 10.00 AM - 08.00 PM</small>
           </div>
         </div>
         <div className="col-lg-5 px-5 text-end">

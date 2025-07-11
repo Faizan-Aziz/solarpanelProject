@@ -1,14 +1,26 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal'; // Import the Fade animation
+import { Fade } from 'react-awesome-reveal';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Serviceofours = () => {
+  // Cloudinary image IDs
+  const serviceImages = [
+    'img-600x400-1_ncamfa',
+    'img-600x400-2_rbjrgr',
+    'img-600x400-3_cwkecu',
+    'img-600x400-4_efdl93',
+    'img-600x400-5_d5mz01',
+    'img-600x400-6_nh3vsv'
+  ];
+
   return (
-    <div className="container-xxl ">
+    <div className="container-xxl">
       <div className="container">
         {/* Title Section with Animation */}
         <Fade direction="down" triggerOnce>
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <h2 className="text-primary" >Our Services</h2>
+            <h2 className="text-primary">Our Services</h2>
             <h3 className="mb-4">
               Whatever your unique solar energy needs,{' '}
               <span className="text-primary">Hafeez Solar Energy</span> has a solution
@@ -22,7 +34,13 @@ const Serviceofours = () => {
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" triggerOnce>
               <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
-                <img className="img-fluid" src="img/img-600x400-1.jpg" alt="" />
+                <LazyLoadImage
+                  className="img-fluid"
+                  src={`https://res.cloudinary.com/dovqlntrq/image/upload/${serviceImages[0]}`}
+                  alt=""
+                  effect="blur"
+                  style={{ width: '100%', height: 'auto' }}
+                />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-solar-panel fa-3x"></i>
@@ -38,7 +56,13 @@ const Serviceofours = () => {
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={100} triggerOnce>
               <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
-                <img className="img-fluid" src="img/img-600x400-2.jpg" alt="" />
+                <LazyLoadImage
+                  className="img-fluid"
+                  src={`https://res.cloudinary.com/dovqlntrq/image/upload/${serviceImages[1]}`}
+                  alt=""
+                  effect="blur"
+                  style={{ width: '100%', height: 'auto' }}
+                />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-wind fa-3x"></i>
@@ -54,7 +78,13 @@ const Serviceofours = () => {
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={200} triggerOnce>
               <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
-                <img className="img-fluid" src="img/img-600x400-3.jpg" alt="" />
+                <LazyLoadImage
+                  className="img-fluid"
+                  src={`https://res.cloudinary.com/dovqlntrq/image/upload/${serviceImages[2]}`}
+                  alt=""
+                  effect="blur"
+                  style={{ width: '100%', height: 'auto' }}
+                />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-lightbulb fa-3x"></i>
@@ -70,7 +100,13 @@ const Serviceofours = () => {
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={300} triggerOnce>
               <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
-                <img className="img-fluid" src="img/img-600x400-4.jpg" alt="" />
+                <LazyLoadImage
+                  className="img-fluid"
+                  src={`https://res.cloudinary.com/dovqlntrq/image/upload/${serviceImages[3]}`}
+                  alt=""
+                  effect="blur"
+                  style={{ width: '100%', height: 'auto' }}
+                />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-solar-panel fa-3x"></i>
@@ -86,7 +122,13 @@ const Serviceofours = () => {
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={400} triggerOnce>
               <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
-                <img className="img-fluid" src="img/img-600x400-5.jpg" alt="" />
+                <LazyLoadImage
+                  className="img-fluid"
+                  src={`https://res.cloudinary.com/dovqlntrq/image/upload/${serviceImages[4]}`}
+                  alt=""
+                  effect="blur"
+                  style={{ width: '100%', height: 'auto' }}
+                />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-wind fa-3x"></i>
@@ -102,7 +144,13 @@ const Serviceofours = () => {
           <div className="col-md-6 col-lg-4">
             <Fade direction="up" delay={500} triggerOnce>
               <div className="service-item rounded overflow-hidden" style={{ height: '665px' }}>
-                <img className="img-fluid" src="img/img-600x400-6.jpg" alt="" />
+                <LazyLoadImage
+                  className="img-fluid"
+                  src={`https://res.cloudinary.com/dovqlntrq/image/upload/${serviceImages[5]}`}
+                  alt=""
+                  effect="blur"
+                  style={{ width: '100%', height: 'auto' }}
+                />
                 <div className="position-relative p-4 pt-0" style={{ lineHeight: '1.8' }}>
                   <div className="service-icon">
                     <i className="fa fa-lightbulb fa-3x"></i>

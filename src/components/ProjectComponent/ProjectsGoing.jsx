@@ -9,15 +9,15 @@ const ProjectsGoing = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
 
-  // Project data
+  // Project data with Cloudinary images
   const projects = [
     {
       id: 1,
       category: 'first',
-      image: '/img/img-600x400-6.jpg',
+      image: 'img-600x400-1_ncamfa',
       title: <strong>4K Watt 24 VOLT</strong>,
       description: (
-        <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B' , lineHeight: 1.6}}>
+        <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B', lineHeight: 1.6 }}>
           4K Watt Inverter Knox/Fox, 6 Solar Panel (580-590) Watt Astronergy/Longi, L2/L3 Stand, DC Wire, AC & DC Breaker, Installation with all Accessories.
           <br />
           <strong className="text-primary">Supports:</strong>
@@ -39,7 +39,7 @@ const ProjectsGoing = () => {
     {
       id: 2,
       category: 'second',
-      image: '/img/img-600x400-5.jpg',
+      image: 'img-600x400-2_rbjrgr',
       title: <strong>6K WATT 48 VOLT</strong>,
       description: (
         <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B', lineHeight: 1.6 }}>
@@ -65,10 +65,10 @@ const ProjectsGoing = () => {
     {
       id: 3,
       category: 'second',
-      image: '/img/img-600x400-4.jpg',
+      image: 'img-600x400-3_cwkecu',
       title: <strong>6K WATT</strong>,
       description: (
-        <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B' , lineHeight: 1.6}}>
+        <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B', lineHeight: 1.6}}>
           ON GRID SOLAR (600-700 UNIT) Monthly
           <br />
           <strong className="text-primary">Supports:</strong>
@@ -92,7 +92,7 @@ const ProjectsGoing = () => {
     {
       id: 4,
       category: 'third',
-      image: '/img/img-600x400-3.jpg',
+      image: 'img-600x400-4_efdl93',
       title: <strong>10K _ WATT</strong>,
       description: (
         <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B', lineHeight: 1.6 }}>
@@ -120,7 +120,7 @@ const ProjectsGoing = () => {
     {
       id: 5,
       category: 'fourth',
-      image: '/img/img-600x400-2.jpg',
+      image: 'img-600x400-5_d5mz01',
       title: <strong>15K _ WATT</strong>,
       description: (
         <div style={{ fontSize: '1rem', fontWeight: 400, color: '#9B9B9B', lineHeight: 1.6 }}>
@@ -154,7 +154,7 @@ const ProjectsGoing = () => {
 
   // Function to open the lightbox
   const openLightbox = (image) => {
-    setSelectedImage(image);
+    setSelectedImage(`https://res.cloudinary.com/dovqlntrq/image/upload/${image}`);
     setIsLightboxOpen(true);
   };
 
@@ -228,24 +228,20 @@ const ProjectsGoing = () => {
                 <div className="portfolio-img rounded overflow-hidden">
                   <img 
                     className="img-fluid" 
-                    src={project.image} 
+                    src={`https://res.cloudinary.com/dovqlntrq/image/upload/${project.image}`} 
                     alt={project.title} 
                     onClick={() => openLightbox(project.image)}
                   />
                   <div className="portfolio-btn">
-                    <a 
-                      className="btn btn-lg-square btn-outline-light rounded-circle mx-1" 
-                      href={project.image} 
-                      onClick={(e) => {
-                        e.preventDefault();
-                        openLightbox(project.image);
-                      }}
+                    <button
+                      className="btn btn-lg-square btn-outline-light rounded-circle mx-1"
+                      onClick={() => openLightbox(project.image)}
                     >
                       <i className="fa fa-eye"></i>
-                    </a>
-                    <a className="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="">
+                    </button>
+                    <button className="btn btn-lg-square btn-outline-light rounded-circle mx-1">
                       <i className="fa fa-link"></i>
-                    </a>
+                    </button>
                   </div>
                 </div>
                 <div className="pt-3">

@@ -4,24 +4,31 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Fade } from 'react-awesome-reveal';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 const Carousel = () => {
+  // Cloudinary configuration
+  const getCloudinaryUrl = (imageId) => {
+    return `https://res.cloudinary.com/dovqlntrq/image/upload/${imageId}`;
+  };
+
   const slides = [
     {
       id: 1,
-      image: 'img/carousel-1.jpg',
+      image: getCloudinaryUrl('carousel-2_xyho0p'),
       title: 'Pakistan\'s Trusted Solar Energy Partner',
       description: 'With 15+ years of expertise, we deliver premium solar solutions that reduce your electricity bills by up to 100%.'
     },
     {
       id: 2,
-      image: 'img/carousel-2.jpg',
+      image: getCloudinaryUrl('carousel-1_por8zs  '),
       title: 'End-to-End Solar Solutions',
       description: 'From residential rooftops to commercial solar farms - design, installation, and maintenance by certified engineers. Pay once, save forever.'
     },
     {
       id: 3,
-      image: 'img/carousel-3.jpg',
+      image: getCloudinaryUrl('carousel-3_axja5w'),
       title: '24/7 Reliable Clean Energy',
       description: 'Smart solar systems with battery backup that power your home day and night. Weather-resistant technology designed for Pakistan\'s climate conditions.'
     }
@@ -37,14 +44,15 @@ const Carousel = () => {
     autoplaySpeed: 3000,
     customPaging: (i) => (
       <div>
-        <img 
-          src={slides[i].image} 
-          alt="" 
+        <LazyLoadImage
+          src={slides[i].image}
+          alt=""
+          effect="opacity"
           style={{ 
             width: '50px', 
             height: '30px',
             objectFit: 'cover'
-          }} 
+          }}
         />
       </div>
     ),
@@ -71,20 +79,33 @@ const Carousel = () => {
       <Slider {...settings}>
         {slides.map((slide) => (
           <div key={slide.id} className="position-relative">
-            <img 
-              className="img-fluid" 
-              src={slide.image} 
-              alt="" 
-              style={{
-                width: '100%',
-                height: '60vh',
-                minHeight: '400px',
-                maxHeight: '600px',
-                objectFit: 'cover',
-                objectPosition: 'center'
-              }} 
-            />
+            {/* Image container with exact original dimensions */}
+            <div style={{
+              width: '100%',
+              height: '60vh',
+              minHeight: '400px',
+              maxHeight: '600px',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              <LazyLoadImage
+                className="img-fluid"
+                src={slide.image}
+                alt=""
+                effect="opacity"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0
+                }}
+              />
+            </div>
 
+            {/* Text overlay - unchanged from original */}
             <div className="owl-carousel-inner position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
               <div className="container">
                 <div className="row justify-content-start">

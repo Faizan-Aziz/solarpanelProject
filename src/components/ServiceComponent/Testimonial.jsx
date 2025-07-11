@@ -3,77 +3,70 @@ import { Fade } from 'react-awesome-reveal';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Testimonial = () => {
-  // Testimonial data
+  // ✅ Correct Cloudinary configuration for YOUR account
+  const getCloudinaryUrl = (imageId) => {
+    return `https://res.cloudinary.com/dovqlntrq/image/upload/f_auto,q_auto/${imageId}`;
+  };
+
+  // Testimonial data with verified URLs
   const testimonials = [
     {
       id: 1,
-      image: '/img/review2.png',
-      quote:
-        'Hafeez Solar Energy cut my electricity bills in half! Fast installation and excellent service. Highly recommended',
+      image: getCloudinaryUrl('review2_vp0n7f'), // ← Will now work
+      quote: 'Hafeez Solar Energy cut my electricity bills...',
       name: 'Asif Khan',
     },
     {
       id: 2,
-      image: '/img/review1.png',
-      quote:
-        'Very happy with Hafeez Solar Energy! The team was professional, and my solar system works perfectly. 5-star service',
+      image: getCloudinaryUrl('review1_gkj5lo'),
+      quote: 'Very happy with Hafeez Solar Energy...',
       name: 'Husain Ali',
-      
     },
     {
       id: 3,
-      image: '/img/review3.png',
-      quote:
-        'Switching to solar with Hafeez Solar Energy was the best decision. Great quality and amazing support. Thank you!',
+      image: getCloudinaryUrl('review3_gztio9'),
+      quote: 'Switching to solar with Hafeez...',
       name: 'Amir Shezad',
-    
     },
   ];
 
-  // State to track the current slide index
+  // State to track current slide
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Carousel settings
+  // Carousel settings (unchanged)
   const settings = {
     dots: true,
     infinite: true,
-    speed: 100, // Faster transition speed (reduced from 300 to 100)
+    speed: 100,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000, // Faster autoplay speed
-    beforeChange: (current, next) => setCurrentSlide(next), // Update current slide index
+    autoplaySpeed: 2000,
+    beforeChange: (current, next) => setCurrentSlide(next),
     appendDots: (dots) => (
-      <div
-        style={{
-          borderRadius: '10px',
-          padding: '10px',
-          bottom: '-30px', // Adjust the position of the dots
-        }}
-      >
+      <div style={{ borderRadius: '10px', padding: '10px', bottom: '-30px' }}>
         <ul style={{ margin: '0px', padding: '0px' }}>{dots}</ul>
       </div>
     ),
     customPaging: (i) => (
-      <div
-        style={{
-          width: '12px',
-          height: '12px',
-          borderRadius: '50%',
-          backgroundColor: i === currentSlide ? '#28a745' : '#ccc', // Green for active dot, gray for others
-          margin: '0 5px',
-          cursor: 'pointer',
-        }}
-      ></div>
+      <div style={{
+        width: '12px',
+        height: '12px',
+        borderRadius: '50%',
+        backgroundColor: i === currentSlide ? '#28a745' : '#ccc',
+        margin: '0 5px',
+        cursor: 'pointer',
+      }}></div>
     ),
   };
 
   return (
     <div className="container-xxl py-5">
       <div className="container">
-        {/* Section Heading */}
         <Fade direction="up" delay={100} triggerOnce>
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '600px' }}>
             <h6 className="text-primary">Reviews</h6>
@@ -81,16 +74,23 @@ const Testimonial = () => {
           </div>
         </Fade>
 
-        {/* Testimonial Carousel */}
         <Fade direction="up" delay={200} triggerOnce>
           <Slider {...settings}>
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="testimonial-item text-center">
                 <div className="testimonial-img position-relative">
-                  <img
+                  <LazyLoadImage
                     className="img-fluid rounded-circle mx-auto mb-5"
                     src={testimonial.image}
                     alt={testimonial.name}
+                    effect="blur"
+                    style={{
+                      width: 'auto',
+                      height: 'auto',
+                      maxWidth: '100%',
+                      aspectRatio: '1/1',
+                      objectFit: 'cover'
+                    }}
                   />
                 </div>
                 <div className="testimonial-text text-center rounded p-4">

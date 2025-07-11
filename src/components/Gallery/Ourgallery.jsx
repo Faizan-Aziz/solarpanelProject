@@ -1,21 +1,23 @@
 import React, { useState, useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const OurGallery = () => {
-  // Media items - 6 images and 3 videos
+  // Media items - 6 images and 3 videos with Cloudinary URLs
   const galleryItems = [
     // Images
-    { id: 1, type: 'image', src: 'img/SolarInstallation.jpg', alt: 'Solar Installation' },
-    { id: 2, type: 'image', src: 'img/tajmill.jpg', alt: 'Solar Project' },
-    { id: 3, type: 'image', src: 'img/Installing .jpg', alt: 'Installation' },
-    { id: 4, type: 'image', src: 'img/Completedproject.jpg', alt: 'Completed Project' },
-    { id: 5, type: 'image', src: 'img/SolarPanelstp.jpg', alt: 'Solar Panel Setup' },
-    { id: 6, type: 'image', src: 'img/IndustrialInstallation.jpg', alt: 'Industrial Installation' },
+    { id: 1, type: 'image', src: 'SolarInstallation_kxh7nm', alt: 'Solar Installation' },
+    { id: 2, type: 'image', src: 'tajmill_f3cmcf', alt: 'Solar Project' },
+    { id: 3, type: 'image', src: 'Installing_j9zenm', alt: 'Installation' },
+    { id: 4, type: 'image', src: 'Completedproject_jkvgx4', alt: 'Completed Project' },
+    { id: 5, type: 'image', src: 'SolarPanelstp_xteemc', alt: 'Solar Panel Setup' },
+    { id: 6, type: 'image', src: 'IndustrialInstallation_qfnlz7', alt: 'Industrial Installation' },
     
     // Videos
-    { id: 7, type: 'video', src: 'video/video3.mp4', title: 'Installation Process' },
-    { id: 8, type: 'video', src: 'video/video2.mp4', title: 'Customer Testimonial' },
-    { id: 9, type: 'video', src: 'video/video1.mp4', title: 'System Overview' }
+    { id: 7, type: 'video', src: 'video3_lxud4o', title: 'Installation Process' },
+    { id: 8, type: 'video', src: 'video2_uwsqra', title: 'Customer Testimonial' },
+    { id: 9, type: 'video', src: 'video1_yejvpy', title: 'System Overview' }
   ];
 
   // State to track which video is playing
@@ -60,10 +62,12 @@ const OurGallery = () => {
                 <div className="service-item rounded overflow-hidden" style={{ height: '320px' }}>
                   {/* Media Content */}
                   {item.type === 'image' ? (
-                    <img
+                    <LazyLoadImage
                       className="img-fluid w-100"
-                      src={item.src}
+                      src={`https://res.cloudinary.com/dovqlntrq/image/upload/${item.src}`}
                       alt={item.alt}
+                      effect="blur"
+                      wrapperClassName="w-100"
                       style={{ 
                         height: '250px',
                         objectFit: 'cover'
@@ -86,7 +90,7 @@ const OurGallery = () => {
                         controls={playingVideo === item.id}
                         onClick={(e) => e.stopPropagation()} // Prevent double triggering
                       >
-                        <source src={item.src} type="video/mp4" />
+                        <source src={`https://res.cloudinary.com/dovqlntrq/video/upload/${item.src}`} type="video/mp4" />
                       </video>
                       {playingVideo !== item.id && (
                         <>

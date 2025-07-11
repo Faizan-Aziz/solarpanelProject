@@ -1,12 +1,14 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 const ChooseUs = () => {
   return (
     <div className="container-fluid bg-light overflow-hidden my-5 px-lg-0">
       <div className="container feature px-lg-0">
         <div className="row g-0 mx-lg-0">
-          {/* Left Section (Text Content) */}
+          {/* Left Section (Text Content) - COMPLETELY UNCHANGED */}
           <div className="col-lg-6 feature-text py-5">
             <Fade direction="left" delay={100} triggerOnce>
               <div className="p-lg-5 ps-lg-0">
@@ -88,14 +90,27 @@ const ChooseUs = () => {
             </Fade>
           </div>
 
-          {/* Right Section (Image) */}
+          {/* Right Section (Image) - Only changed the image tag */}
           <div className="col-lg-6 pe-lg-0" style={{ minHeight: '400px' }}>
             <div className="position-relative h-100">
-              <img
+              <LazyLoadImage
                 className="position-absolute img-fluid w-100 h-100"
-                src="/img/feature.jpg"
-                style={{ objectFit: 'cover' }}
+                src="https://res.cloudinary.com/dovqlntrq/image/upload/feature_aqqbhz"
                 alt="Feature"
+                effect="opacity"
+                style={{ 
+                  objectFit: 'cover',
+                  display: 'block'
+                }}
+                wrapperProps={{
+                  style: {
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%'
+                  }
+                }}
               />
             </div>
           </div>
